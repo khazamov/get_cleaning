@@ -53,7 +53,7 @@ by_act_subj <- group_by(df_final0,V1,subject_num)
 df_final1   <-   by_act_subj %>% summarise_each("mean")
 
 df_final2 <- merge(df_final1, activity_names, by.x = "V1",by.y="V1", all.x=TRUE, sort=FALSE)
-colnames(df_final2)[1]<-"activity_type"
-colnames(df_final2)[89]<-"activity_name"
-df_final2<-df_final2[,c(1,89,2,3:88)]
-write.table(df_final2, file="TIDY_DATASET_UCI",col.names = FALSE)
+df_final2$V1 <- NULL
+df_final2<-df_final2[,c(1,88,2:87)]
+colnames(df_final2)[2] <- "Activity name"
+write.table(df_final2, file="TIDY_DATASET_UCI.txt",col.names = FALSE)
