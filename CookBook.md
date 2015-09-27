@@ -24,15 +24,14 @@ a study subject.
 ##Creating the tidy datafile
 
 ###Guide to create the tidy data file
-Description on how to create the tidy data file (1. download the data, ...)/
 1. Download training and testing data from http://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions 
 to your folder
 2. Run run_analysis.R from within the data folder 
 3. Observe file TIDY_DATASET_UCI with tidy dataset
 
 ###Cleaning of the data
-Script filters out measurments containing avg and mean  values from data frame into new data frame. Also script binds testing and training data together. Descriptive variables explain it better, target values are given  names. 
-computes average of each variable in regards to each subject, and each activity type, outputting it afterwards to the file.
+Script filters out measurments containing avg and mean  values from data frame into new data frame, binds testing and training data together. Descriptive variables explain it better, target values are given  names. 
+Script also computes average of each variable in regards to each subject, and each activity type, outputting it afterwards to the file.
 
 ##General Description:
   - Original dataset has following dimension: 10299 by 88
